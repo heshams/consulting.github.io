@@ -3,30 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO -->
     <title>Hesham Awad Consulting – Power BI & Data Analytics</title>
     <meta name="description" content="Power BI and Data Analytics consulting in Germany. Custom dashboards, insights, and business intelligence solutions.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.awadconsulting.de/">
-    <!-- FAVICON -->
-    <link rel="icon" href="/favicon.ico">
-    <!-- GOOGLE ANALYTICS -->
-    <script>
-        (function(w,d,s,l,i){
-            w[l]=w[l]||[];
-            w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
-            var f=d.getElementsByTagName(s)[0],
-                j=d.createElement(s),
-                dl=l!='dataLayer'?'&l='+l:'';
-            j.async=true;
-            j.src='https://www.googletagmanager.com/gtag/js?id='+i+dl;
-            f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','G-MEBE8YFJSH');
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-MEBE8YFJSH');
-    </script>
     <style>
         * {
             margin: 0;
@@ -60,6 +38,28 @@
             background: radial-gradient(circle, rgba(230, 126, 34, 0.1) 1px, transparent 1px);
             background-size: 50px 50px;
             animation: moveBackground 20s linear infinite;
+        }
+
+        /* KPI Background Images */
+        .bg-animation::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'%3E%3Cg opacity='0.03' fill='%23e67e22'%3E%3Cpath d='M100,400 L200,350 L300,380 L400,320 L500,360' stroke='%23e67e22' stroke-width='3' fill='none'/%3E%3Ccircle cx='100' cy='400' r='8'/%3E%3Ccircle cx='200' cy='350' r='8'/%3E%3Ccircle cx='300' cy='380' r='8'/%3E%3Ccircle cx='400' cy='320' r='8'/%3E%3Ccircle cx='500' cy='360' r='8'/%3E%3Crect x='700' y='300' width='60' height='150' rx='5'/%3E%3Crect x='780' y='250' width='60' height='200' rx='5'/%3E%3Crect x='860' y='200' width='60' height='250' rx='5'/%3E%3Crect x='940' y='280' width='60' height='170' rx='5'/%3E%3Ctext x='100' y='100' font-size='48' font-weight='bold'%3E94%25%3C/text%3E%3Ctext x='100' y='130' font-size='16'%3EKPI Target%3C/text%3E%3Cpath d='M950,100 L950,150 L1000,150 L1050,100 L1000,50 L950,50 Z' stroke='%23e67e22' stroke-width='2' fill='none'/%3E%3Ctext x='650' y='600' font-size='40' font-weight='bold'%3E↗ 23%25%3C/text%3E%3Cpath d='M200,600 Q250,550 300,600 T400,600' stroke='%23e67e22' stroke-width='2' fill='none'/%3E%3C/g%3E%3C/svg%3E");
+            background-size: 80%;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 1;
+            animation: fadeKPI 8s ease-in-out infinite;
+        }
+
+        @keyframes fadeKPI {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 0.7; }
         }
 
         @keyframes moveBackground {
@@ -341,17 +341,6 @@
             background: rgba(230, 126, 34, 0.05);
         }
 
-        .dashboard-placeholder {
-            text-align: center;
-            color: rgba(255, 255, 255, 0.5);
-        }
-
-        .dashboard-placeholder span {
-            font-size: 80px;
-            display: block;
-            margin-bottom: 20px;
-        }
-
         /* Contact Section */
         .contact-section {
             background: rgba(255, 255, 255, 0.03);
@@ -480,48 +469,20 @@
             </div>
         </section>
 
-       <section class="dashboard-section" id="dashboard" style="position: relative; z-index: 1;">
-    <h2 class="section-title">Sample Power BI Dashboard</h2>
-
-    <!-- SVG Background -->
-    <svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg"
-         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
-      <defs>
-        <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
-          <stop offset="50%" style="stop-color:#16213e;stop-opacity:1" />
-          <stop offset="100%" style="stop-color:#0f3460;stop-opacity:1" />
-        </linearGradient>
-        <radialGradient id="glowGradient" cx="50%" cy="50%">
-          <stop offset="0%" style="stop-color:#4facfe;stop-opacity:0.2" />
-          <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:0" />
-        </radialGradient>
-      </defs>
-
-      <!-- Base gradient background -->
-      <rect width="1920" height="1080" fill="url(#mainGradient)"/>
-      
-      <!-- Glow circles -->
-      <circle cx="200" cy="150" r="300" fill="url(#glowGradient)" opacity="0.4"/>
-      <circle cx="1720" cy="930" r="350" fill="url(#glowGradient)" opacity="0.3"/>
-      <circle cx="960" cy="540" r="400" fill="url(#glowGradient)" opacity="0.2"/>
-    </svg>
-
-    <!-- Dashboard iframe -->
-    <div class="dashboard-preview">
-        <iframe
-            title="Web5"
-            src="https://app.powerbi.com/view?r=eyJrIjoiNTkyMGE2NjEtMjVkZS00M2Y5LTliZjAtYjgzMTk4Mjg3ZWU0IiwidCI6Ijg4NzcwMzA0LTBlMjQtNGNjNy1iZDQwLTBjMTI4ZjljZWJlYiJ9"
-            width="100%"
-            height="600"
-            frameborder="0"
-            allowFullScreen="true"
-            style="border-radius: 25px; border: none; backdrop-filter: blur(20px); 
-                   box-shadow: 0 15px 50px rgba(230,126,34,0.3); background: rgba(255,255,255,0.03);">
-        </iframe>
-    </div>
-</section>
-
+        <section class="dashboard-section" id="dashboard">
+            <h2 class="section-title">Sample Power BI Dashboard</h2>
+            <div class="dashboard-preview">
+                <iframe
+                    title="Web5"
+                    src="https://app.powerbi.com/view?r=eyJrIjoiNTkyMGE2NjEtMjVkZS00M2Y5LTliZjAtYjgzMTk4Mjg3ZWU0IiwidCI6Ijg4NzcwMzA0LTBlMjQtNGNjNy1iZDQwLTBjMTI4ZjljZWJlYiJ9"
+                    width="100%"
+                    height="600"
+                    frameborder="0"
+                    allowFullScreen="true"
+                    style="border-radius: 15px; border: none;">
+                </iframe>
+            </div>
+        </section>
 
         <section class="contact-section" id="contact">
             <h2>Contact</h2>
